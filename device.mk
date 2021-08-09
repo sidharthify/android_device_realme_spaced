@@ -301,6 +301,11 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlaySpaced \
     OplusDozeOverlaySpaced
 
+# MTK IMS Overlays
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
