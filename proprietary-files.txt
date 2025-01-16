@@ -2288,10 +2288,6 @@ vendor/bin/fuelgauged
 vendor/etc/init/fuelgauged_init.rc
 vendor/lib/libfgauge_gm30.so
 
-# Hotword Enrollment
--my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar
--my_product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4.apk:product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk
-
 # IMS - From Vitamin
 system_ext/bin/vtservice|fb9c50e2341fd82c3ebd789fb1b803a9fef3c660
 system_ext/etc/init/init.vtservice.rc|d1bad63ed1e5dc8cbf02c5ec37022a7753330729
@@ -2316,6 +2312,44 @@ system_ext/lib64/libvt_avsync.so|89f4708ced15e4b5dffa4d1f273852c90f50374f
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|6a77d25f3940a363b4113688f75e06c91f82fa57
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|877601fc7a2a111c0032425f231dc2dec4c9acda
 system_ext/priv-app/ImsService/ImsService.apk|5c92e65025ff99c918c65cea135e1ff36e178910
+
+# ImsService
+-priv-app/ImsService/ImsService.apk|738b92467c052c0e95ee3fd748bde51ab0b90336
+
+# IMS (framework)
+-framework/mediatek-carrier-config-manager.jar;BOOT_JAR
+-framework/mediatek-common.jar;BOOT_JAR
+-framework/mediatek-framework.jar;BOOT_JAR
+-framework/mediatek-ims-base.jar;BOOT_JAR
+-framework/mediatek-ims-common.jar;BOOT_JAR
+-framework/mediatek-ims-extension-plugin.jar;BOOT_JAR
+-framework/mediatek-services.jar;BOOT_JAR
+-framework/mediatek-telecom-common.jar;BOOT_JAR
+-framework/mediatek-telephony-base.jar;BOOT_JAR
+-framework/mediatek-telephony-common.jar;BOOT_JAR
+
+# IMS (Native)
+bin/vtservice
+etc/init/init.vtservice.rc
+lib/libmtk_vt_wrapper.so
+lib/libvcodec_cap.so
+lib/libvsim-adaptor-client.so
+lib64/libcomutils.so
+lib64/libimsma.so
+lib64/libimsma_adapt.so
+lib64/libimsma_rtp.so
+lib64/libimsma_socketwrapper.so
+lib64/libmtk_vt_service.so
+lib64/libmtk_vt_wrapper.so
+lib64/libsignal.so
+lib64/libsink.so
+lib64/libsource.so
+lib64/libvcodec_cap.so
+lib64/libvcodec_capenc.so
+lib64/libvsim-adaptor-client.so
+lib64/libvt_avsync.so
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # Radio (Ims)
 odm/lib/vendor.oplus.hardware.ims@1.0.so
