@@ -476,13 +476,13 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>90</item>
+        <item>95</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>70</item>
+        <item>80</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback that simulates a double click effect -->
