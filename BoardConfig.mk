@@ -142,20 +142,20 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 1
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
 # VINTF
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifests/manifest.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/device_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/manifests/device_framework_compatibility_matrix.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
     vendor/yaap/config/device_framework_matrix.xml
-ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
+ODM_MANIFEST_FILES := $(DEVICE_PATH)/configs/manifests/manifest_odm.xml
 
 ODM_MANIFEST_SKUS += nfc
-ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
+ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/manifests/manifest_nfc.xml
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # VNDK
 BOARD_VNDK_VERSION := current
