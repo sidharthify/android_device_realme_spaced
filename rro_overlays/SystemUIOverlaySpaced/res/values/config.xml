@@ -32,7 +32,7 @@
     <dimen name="status_bar_padding_top">24.0px</dimen>
 
     <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
-    <integer name="config_aodMaxRefreshRate">60</integer>
+    <integer name="config_aodMaxRefreshRate">30</integer>
 
     <!-- Whether the combined qs shows in status bar when true, the combined qs will not be available
          if set it to false  -->
