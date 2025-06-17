@@ -79,6 +79,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio-impl
 
+TARGET_BOARD_PLATFORM := mt6781
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
@@ -217,20 +219,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service-spaced
-
 # Vendor Log Tag
 include $(LOCAL_PATH)/vendor_logtag.mk
 
@@ -352,13 +340,6 @@ PRODUCT_COPY_FILES += \
 # PowerOffAlarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
-
-# Lineage-Specific overlays
-PRODUCT_PACKAGES += \
-    LineageApertureOverlaySpaced \
-    PowerOffAlarmOverlaySpaced \
-    LineageDialerOverlaySpaced \
-    LineageSDKOverlaySpaced
 
 # Power
 PRODUCT_PACKAGES += \
