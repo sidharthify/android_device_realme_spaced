@@ -56,13 +56,13 @@ done
 
 function blob_fixup {
     case "$1" in
+        system_ext/priv-app/ImsService/ImsService.apk)
+            [ "$2" = "" ] && return 0
+            apktool_patch "${2}" "${MY_DIR}/ims-patches"
+            ;;
         vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron|odm/bin/hw/vendor.oplus.hardware.charger@1.0-service|vendor/lib*/libnvram.so|vendor/lib*/libsysenv.so)
             [ "$2" = "" ] && return 0
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
-            ;;
-        priv-app/ImsService/ImsService.apk)
-            [ "$2" = "" ] && return 0
-            apktool_patch "${2}" "${MY_DIR}/ims-patches"
             ;;
         vendor/lib*/hw/audio.primary.mt6781.so)
              "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
