@@ -16,11 +16,10 @@ $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 PRODUCT_NAME := yaap_spaced
 PRODUCT_DEVICE := spaced
-PRODUCT_MANUFACTURER := Realme
-PRODUCT_BRAND := Realme
-PRODUCT_MODEL := Realme 8i
+PRODUCT_MANUFACTURER := realme
+PRODUCT_BRAND := realme
+PRODUCT_MODEL := RE54BFL1
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
-
 
 BUILD_FINGERPRINT := realme/RMX3151/RE54B4L1:13/SP1A.210812.016/R.15e21b8+bde:user/release-keys
