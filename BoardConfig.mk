@@ -73,7 +73,7 @@ BOARD_DTBOIMG_PARTITION_SIZE := 8388608            # 8192      * 1024 (sdc44)
 BOARD_SUPER_PARTITION_SIZE := 10200547328          # 9961472   * 1024 (sdc47)
 
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-
+-include $(DEVICE_PATH)/configs/BoardConfigReservedSize.mk
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions (Dynamic)
