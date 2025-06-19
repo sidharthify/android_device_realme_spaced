@@ -14,6 +14,15 @@ on init
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
 
+# IMS
+    setprop persist.dbg.allow_ims_off 1
+    setprop persist.dbg.volte_avail_ovr 1
+    setprop persist.dbg.vt_avail_ovr 1
+    setprop persist.dbg.wfc_avail_ovr 1
+    setprop persist.vendor.vilte_support 0
+    setprop persist.vendor.ims_support 1
+    setprop persist.vendor.volte_support 1
+
 # Set permissions on oplus_chg nodes
     chown system system /sys/class/oplus_chg/battery/short_c_hw_status
     chown system system /sys/class/oplus_chg/battery/short_c_hw_feature
@@ -798,7 +807,7 @@ service fuelgauged_nvram /vendor/bin/fuelgauged_nvram
     group system
     oneshot
 
-#adb
+# ADB
 on property:persist.vendor.radio.port_index=""
     setprop sys.usb.config adb
 
@@ -833,3 +842,4 @@ service charger /system/bin/charger
     file /sys/fs/pstore/console-ramoops-0 r
     file /sys/fs/pstore/console-ramoops r
     file /proc/last_kmsg r
+
